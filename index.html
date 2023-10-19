@@ -1,10 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/totalAmountStyle.css">
+    <link rel="stylesheet" href="css/headerStyles.css">
+    <link rel="stylesheet" href="css/paymentMethodStyles.css">
+    <title>Товары и точка</title>
 </head>
 <body>
+<div class="main-container">
+    <div class="header">
+        <div class="header-content">
+            <button class="menu-burger">
+                <span class="burger-line">
+                </span>
+            </button>
+            <div class="logo">
+                <img src="assets/icons/logo.svg" alt="logo">
+            </div>
+            <form class="search-form">
+                <input class="input-field" placeholder="Я ищу...">
+                <img src="assets/icons/Search.svg" alt="Search icon">
+            </form>
+            <div class="menu-buttons">
+                <button class="profile-button">
+                    <img src="assets/icons/profile-icon.svg" alt="Profile icon">
+                    <span class="button-title">Профиль</span>
+                </button>
+                <button class="basket-button">
+                    <img src="assets/icons/Basket-icon.svg" alt="Basket icon">
+                    <span class="button-title">Корзина</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
+    <div class="basket-main-container">
+        <div class="basket-container">
+            <div class="basket">
+
+
+                <div class="payment-method-card">
+                    <div class="title-basket-part">
+                        <span>Способ оплаты</span>
+                        <button class="edit-button">Изменить</button>
+                    </div>
+                    <div class="payment-card-data">
+                        <img src="assets/icons/Payment-systems.svg" alt="Payment system">
+                        <span>1234 56•• •••• 1234 01/30</span>
+                    </div>
+                    <span class="signature">Спишем оплату с карты при получении</span>
+                </div>
+
+
+                <div class="recipient-details-card">
+                    <span class="title-recipient-details">Получатель</span>
+                    <div class="recipient-details">
+                        <div class="line-styles">
+                            <input class="input-styles" placeholder="Имя">
+                            <input class="input-styles" placeholder="Фамилия">
+                        </div>
+                        <div class="line-styles">
+                            <input class="input-styles contacts" placeholder="Почта">
+                            <input class="input-styles contacts" placeholder="Телефон">
+                            <input class="input-styles contacts" placeholder="ИНН">
+                        </div>
+                        <label class="label-inn-style">
+                            Для таможенного оформления
+                        </label>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="total-amount-card">
+                <div class="total-price">
+                    <span>Итого</span>
+                    <span id="total-price">2 101 063 сом</span>
+                </div>
+                <div class="price-information">
+                    <div class="information-style">
+                        <span>203 товара</span>
+                        <span>2 302 048 сом</span>
+                    </div>
+                    <div class="information-style">
+                        <span>Скидка</span>
+                        <span>−200 985 сом</span>
+                    </div>
+                    <div class="information-style">
+                        <span>Доставка</span>
+                        <span>Бесплатно</span>
+                    </div>
+                </div>
+                <div class="part-of-the-delivery-data">
+                    <div class="title-part">
+                        <span>
+                            Доставка в пункт выдачи
+                        </span>
+                        <img class="edit-pencil" src="assets/icons/edit-pencil.svg" alt="Edit pencil">
+                    </div>
+                    <div class="address-delivery">
+                        <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+                        <span id="delivery-date">5–8 фев</span>
+                    </div>
+                    <div class="info-return-cost">
+                        <img src="assets/icons/price-shipping.svg" alt="Price shipping">
+                        <span>
+                        Обратная доставка товаров на склад при отказе —
+                        бесплатно
+                    </span>
+                    </div>
+                </div>
+                <div class="part-payment-by-card">
+                    <div class="title-part">
+                        <span>
+                            Оплата картой
+                        </span>
+                        <img class="edit-pencil" src="assets/icons/edit-pencil.svg" alt="Edit pencil">
+                    </div>
+                    <div class="card-details">
+                        <img src="assets/icons/Payment-systems.svg" alt="Payment systems icon">
+                        <span>
+                            1234 12•• •••• 1234
+                        </span>
+                    </div>
+                    <div class="write-off-of-payment">
+                        <div class="payment-checkbox">
+                            <input type="checkbox">
+                            <label>
+                                Списать оплату сразу
+                            </label>
+                        </div>
+                        <span>
+                            Спишем оплату с карты при получении
+                        </span>
+                    </div>
+                </div>
+                <button class="order-button">
+                    Заказать
+                </button>
+                <div class="agreement">
+                    <img src="assets/icons/check-mark.svg" alt="Check mark">
+                    <span>
+                      Соглашаюсь с правилами пользования торговой площадкой и возврата
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
