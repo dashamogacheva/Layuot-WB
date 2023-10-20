@@ -1,0 +1,27 @@
+
+.payment-method-card {
+    padding: 16px 24px 24px 24px;
+    border-radius: 16px;
+    border: none;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.payment-card-data {
+    display: inline-flex;
+    font-size: 16px;
+}
+
+.payment-card-data span {
+    margin-left: 8px;
+}
+
+.signature {
+    font-size: 13px;
+    color: #9797AF;
+    margin-top: 5px;
+}

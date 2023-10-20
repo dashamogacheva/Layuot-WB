@@ -1,0 +1,71 @@
+.delivery-method-card {
+    padding: 16px 24px 24px 24px;
+    border-radius: 16px;
+    border: none;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.part-card {
+    display: inline-flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.title-left-part-card {
+    width: 22%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pick-up-point-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-part-card {
+    font-size: 16px;
+}
+
+.schedule {
+    display: inline-flex;
+    font-size: 13px;
+}
+
+.grade {
+    display: inline-flex;
+    margin-right: 8px;
+}
+
+.grade img {
+    margin-right: 4px;
+}
+
+.products-delivery {
+    display: inline-flex;
+}
+
+.image-styles {
+    margin-right: 8px;
+    width: 40px;
+    height: 56px;
+}
+
+.return-cost {
+    display: inline-flex;
+    font-size: 13px;
+}
+
+.return-cost img {
+    margin-right: 8px;
+}
+
+.free-return-styles {
+    color: #0CB477;
+    border-bottom: 1px dashed #0CB47733;
+    width: 62px;
+    margin-left: 4px;
+}
