@@ -1,0 +1,54 @@
+.missing-products-card {
+    padding: 16px 0 24px 0;
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.cart-buttons {
+    display: inline-flex;
+    width: 20%;
+}
+
+.cart-buttons img {
+    cursor: pointer;
+}
+
+.missing-products-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.missing-products-info {
+    display: inline-flex;
+    align-items: flex-start;
+    margin:  10px 0 5px 0;
+}
+
+.description-section {
+    justify-content: space-between;
+}
+
+.missing-product-img-style {
+    margin-right: 20px;
+    filter: grayscale(1);
+}
+
+.missing-products-description {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #9797AF;
+}
+
+.characteristics-missing-products {
+    display: inline-flex;
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.characteristics-missing-products span {
+    margin-right: 15px;
+}

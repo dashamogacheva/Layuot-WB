@@ -3,25 +3,33 @@ body {
     background-color: #F4F4F8FF;
 }
 
-.basket-main-container {
+.cart-main-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.basket-container {
+.cart-container {
     display: flex;
     justify-content: space-between;
     width: 1400px;
 }
 
-.basket {
-    width: 70%;
+.cart {
+    width: 65%;
     margin: 20px 0 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.title-cart-part {
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .edit-button {
@@ -32,46 +40,19 @@ body {
     font-size: 16px;
 }
 
-.recipient-details-card {
-    padding: 16px 24px 24px 24px;
-    border-radius: 16px;
-    border: none;
-    background-color: #ffffff;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.like-icon-style {
+    margin-right: 25px;
 }
 
-.title-recipient-details {
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.recipient-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-}
-
-.line-styles {
+.cart-subtitle {
     display: inline-flex;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #0000001A;
 }
 
-.input-styles {
-    border: none;
-    border-bottom: 1px solid #00000033;
-    width: 330px;
-    margin: 0 15px 0 0;
-}
-
-.contacts {
-    width: 215px;
-}
-
-.label-inn-style {
-    font-size: 12px;
-
+.hide-icon {
+    cursor: pointer;
 }

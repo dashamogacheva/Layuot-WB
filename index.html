@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/totalAmountStyle.css">
+    <link rel="stylesheet" href="css/totalAmountStyles.css">
     <link rel="stylesheet" href="css/headerStyles.css">
     <link rel="stylesheet" href="css/paymentMethodStyles.css">
+    <link rel="stylesheet" href="css/recipientDetailsCardStyles.css">
+    <link rel="stylesheet" href="css/deliveryMethodCardStyles.css">
+    <link rel="stylesheet" href="css/missingProductsCardStyles.css">
     <title>Товары и точка</title>
 </head>
 <body>
@@ -37,13 +40,138 @@
         </div>
     </div>
 
-    <div class="basket-main-container">
-        <div class="basket-container">
-            <div class="basket">
+    <div class="cart-main-container">
+        <div class="cart-container">
+            <div class="cart">
 
+
+                <div class="missing-products-card">
+                    <div class="cart-subtitle">
+                        <span>
+                            Отсутствуют · 3 товара
+                        </span>
+                        <img class='hide-icon' src="assets/icons/hide-icon.svg" alt="Hide icon">
+                    </div>
+                    <div class="missing-products-list">
+                        <div class="missing-products-info description-section">
+                            <div class="missing-products-info">
+                                <img class="missing-product-img-style" src="assets/image/tShirt.png"
+                                     alt="Image product">
+                                <div class="missing-products-description">
+                                    <span>
+                                        Футболка UZcotton мужская
+                                    </span>
+                                    <div class="characteristics-missing-products">
+                                        <span>
+                                            Цвет: белый
+                                        </span>
+                                        <span>
+                                            Размер: 56
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-buttons">
+                                <img class="like-icon-style" src="assets/icons/like-icon.svg" alt="Like icon">
+                                <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                            </div>
+                        </div>
+                        <div class="missing-products-info description-section">
+                            <div class="missing-products-info">
+                                <img class="missing-product-img-style" src="assets/image/phoneCase.png"
+                                     alt="Image product">
+                                <div class="missing-products-description">
+                                    <span>
+                                        Футболка UZcotton мужская
+                                    </span>
+                                    <div class="characteristics-missing-products">
+                                        <span>
+                                            Цвет: белый
+                                        </span>
+                                        <span>
+                                            Размер: 56
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-buttons">
+                                <img class="like-icon-style" src="assets/icons/like-icon.svg" alt="Like icon">
+                                <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                            </div>
+                        </div>
+                        <div class="missing-products-info description-section">
+                            <div class="missing-products-info">
+                                <img class="missing-product-img-style" src="assets/image/tShirt.png"
+                                     alt="Image product">
+                                <div class="missing-products-description">
+                                    <span>
+                                        Футболка UZcotton мужская
+                                    </span>
+                                    <div class="characteristics-missing-products">
+                                        <span>
+                                            Цвет: белый
+                                        </span>
+                                        <span>
+                                            Размер: 56
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-buttons">
+                                <img class="like-icon-style" src="assets/icons/like-icon.svg" alt="Like icon">
+                                <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="delivery-method-card">
+                    <div class="title-cart-part">
+                        <span>Способ доставки</span>
+                        <button class="edit-button">Изменить</button>
+                    </div>
+                    <div class="part-card">
+                        <span class="title-left-part-card">Пункт выдачи</span>
+                        <div class="pick-up-point-data">
+                            <span class="right-part-card">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+                            <div class="schedule">
+                                <div class="grade">
+                                    <img src="assets/icons/Stars.svg" alt="Stars">
+                                    <span>4.99</span>
+                                </div>
+                                <span>Ежедневно с 10 до 21 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-card">
+                        <span class="title-left-part-card">Стоимость доставки</span>
+                        <span class="right-part-card">Бесплатно</span>
+                    </div>
+                    <div class="part-card">
+                        <span class="title-left-part-card">5—6 февраля</span>
+                        <div class="products-delivery">
+                            <img class='image-styles' src="assets/image/tShirt.png" alt="T-shirt">
+                            <img class='image-styles' src="assets/image/phoneCase.png" alt="Phone case">
+                            <img class='image-styles' src="assets/image/pencils.png" alt="Pencils">
+                        </div>
+                    </div>
+                    <div class="part-card">
+                        <span class="title-left-part-card">6—8 февраля</span>
+                        <div class="products-delivery">
+                            <img class='image-styles' src="assets/image/phoneCase.png" alt="Phone case">
+                        </div>
+                    </div>
+                    <div class="return-cost">
+                        <img src="assets/icons/price-shipping.svg" alt="Price shipping">
+                        <span>
+                            Обратная доставка товаров на склад при отказе —
+                        </span>
+                        <span class="free-return-styles">бесплатно</span>
+                    </div>
+                </div>
 
                 <div class="payment-method-card">
-                    <div class="title-basket-part">
+                    <div class="title-cart-part">
                         <span>Способ оплаты</span>
                         <button class="edit-button">Изменить</button>
                     </div>
@@ -54,25 +182,41 @@
                     <span class="signature">Спишем оплату с карты при получении</span>
                 </div>
 
-
                 <div class="recipient-details-card">
                     <span class="title-recipient-details">Получатель</span>
                     <div class="recipient-details">
                         <div class="line-styles">
-                            <input class="input-styles" placeholder="Имя">
-                            <input class="input-styles" placeholder="Фамилия">
+                            <div class="div-input-styles">
+                                <input class="input-styles" placeholder="">
+                                <label class="label-for-input">Имя</label>
+                            </div>
+                            <div class="div-input-styles">
+                                <input class="input-styles" placeholder="">
+                                <label class="label-for-input">Фамилия</label>
+                            </div>
                         </div>
                         <div class="line-styles">
-                            <input class="input-styles contacts" placeholder="Почта">
-                            <input class="input-styles contacts" placeholder="Телефон">
-                            <input class="input-styles contacts" placeholder="ИНН">
+                            <div class="div-input-styles">
+                                <input class="input-styles" placeholder="">
+                                <label class="label-for-input">Почта</label>
+                            </div>
+                            <div class="div-input-styles">
+                                <input class="input-styles" placeholder="">
+                                <label class="label-for-input">Телефон</label>
+                            </div>
+                            <div class="inn-div-style">
+                                <div class="div-input-styles">
+                                    <input class="input-styles" placeholder="">
+                                    <label class="label-for-input">ИНН</label>
+                                </div>
+                                <label class="label-inn-style">
+                                    Для таможенного оформления
+                                </label>
+                            </div>
                         </div>
-                        <label class="label-inn-style">
-                            Для таможенного оформления
-                        </label>
+
                     </div>
                 </div>
-
 
             </div>
             <div class="total-amount-card">
@@ -107,10 +251,14 @@
                     </div>
                     <div class="info-return-cost">
                         <img src="assets/icons/price-shipping.svg" alt="Price shipping">
-                        <span>
-                        Обратная доставка товаров на склад при отказе —
-                        бесплатно
-                    </span>
+                        <div>
+                            <span>
+                            Обратная доставка товаров на склад при отказе —
+                        </span>
+                            <span class="free-return-styles">бесплатно</span>
+                        </div>
+
+
                     </div>
                 </div>
                 <div class="part-payment-by-card">
