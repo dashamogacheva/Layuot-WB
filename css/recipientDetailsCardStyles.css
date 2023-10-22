@@ -6,18 +6,17 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 }
 
 .title-recipient-details {
     font-weight: 700;
     font-size: 24px;
-    /*margin-bottom: 20px;*/
 }
 
 .recipient-details {
     display: flex;
     flex-direction: column;
-    /*justify-content: start;*/
     align-items: flex-start;
 }
 
@@ -34,7 +33,6 @@
 }
 
 .input-styles {
-    /*width: 330px;*/
     margin: 20px 15px 0 0;
     border: none;
     font-size: 16px;
