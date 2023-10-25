@@ -17,12 +17,12 @@
 }
 
 #total-price {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .price-information {
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: 22px;
+    margin-top: 7px;
 }
 
 .information-style {
@@ -34,7 +34,7 @@
 .part-of-the-delivery-data, .part-payment-by-card {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
 }
 
 .title-part {
@@ -81,11 +81,11 @@
     padding: 8px 8px 12px 8px;
     font-size: 13px;
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
-.info-return-cost span {
-    margin-left: 8px;
+.info-return-cost img {
+    margin-right: 8px;
 }
 
 .write-off-of-payment {
@@ -115,6 +115,7 @@
 }
 
 .agreement {
+    margin-top: 2px;
     font-size: 13px;
     display: inline-flex;
 }
