@@ -5,7 +5,7 @@ export const productsList = [
     "imgURL": "tShirt",
     "size": 56,
     "price": 522,
-    "oldPrice": "1050 сом",
+    "oldPrice": 1050,
     "quantity": 2,
     "stock": "Коледино WB",
     "company": "OOO Вайлдберриз"
@@ -16,7 +16,7 @@ export const productsList = [
     "imgURL": "phoneCase",
     "size": null,
     "price": 10500.235,
-    "oldPrice": "1150.235 сом",
+    "oldPrice": 11500.235,
     "quantity": 300,
     "stock": "Коледино WB",
     "company": "OOO Мегапрофстиль"
@@ -27,7 +27,7 @@ export const productsList = [
     "imgURL": "pencils",
     "size": null,
     "price": 247,
-    "oldPrice": "475 сом",
+    "oldPrice": 475,
     "quantity": 2,
     "stock": "Коледино WB",
     "company": "OOO Вайлдберриз"

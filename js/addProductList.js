@@ -14,10 +14,11 @@ const addProductList = () => {
         }
         cloneTemplate.querySelector('#stockProduct').textContent = elem.stock;
         cloneTemplate.querySelector('#companyProduct').textContent = elem.company;
-        cloneTemplate.querySelector('.products-left-style').textContent = 'Осталось ' + elem.quantity + ' шт.';
-        cloneTemplate.querySelector('.price-style').textContent = elem.price;
-        cloneTemplate.querySelector('.old-price').textContent = elem.oldPrice;
-
+        if (elem.quantity < 5) {
+            cloneTemplate.querySelector('.products-left-style').textContent = 'Осталось ' + elem.quantity + ' шт.';
+        }
+        cloneTemplate.querySelector('.price-style').textContent = (Math.round(elem.price)).toLocaleString();
+        cloneTemplate.querySelector('.old-price').textContent = (Math.round(elem.oldPrice)).toLocaleString() + " сом";
         allProducts.append(cloneTemplate);
     })
 }

@@ -5,7 +5,9 @@ const addMissingProductList = () => {
     productsList.forEach(elem => {
         let cloneTemplate = templateMissingProductList.content.cloneNode(true);
         cloneTemplate.querySelector('.titleProduct').textContent = elem.name;
-        // cloneTemplate.querySelector('missing-img').src = `assets/image/'${elem.imgURL}' + .png`;
+        // let imgElem = cloneTemplate.getElementById('#missingImg');
+        // console.log (imgElem);
+        // imgElem.src = `assets/image/${elem.imgURL}.png`;
         if (elem.color) {
             cloneTemplate.querySelector('.colorProduct').textContent = 'Цвет: ' + elem.color;
         }
