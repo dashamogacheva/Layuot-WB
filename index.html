@@ -50,13 +50,13 @@
             <div class="price-section">
                 <div class="product-operations">
                     <div class="counter">
-                        <button class="counter-button-styles">
+                        <button id="deleteCount" class="counter-button-styles" disabled>
                             −
                         </button>
-                        <span>
+                        <span id="productCount">
                             1
                         </span>
-                        <button class="counter-button-styles">
+                        <button id="addCount" class="counter-button-styles">
                             +
                         </button>
                     </div>
@@ -66,7 +66,7 @@
                     <div class="cart-buttons">
                         <img class="like-icon-style" src="assets/icons/like-icon.svg"
                              alt="Like icon">
-                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                        <img class="deleteIcon" src="assets/icons/delete-icon.svg" alt="Delete icon">
                     </div>
                 </div>
                 <div class="products-price">
@@ -86,14 +86,11 @@
         </div>
     </div>
 </template>
-
 <template id="templateMissingProductList">
     <div class="products-list">
         <div class="products-info description-section">
             <div class="products-info">
-                <img class="product-img-style missing-img" alt="Image product">
-                <!--                     src="assets/image/tShirt.png"-->
-
+                <img class="product-img-style" id="missingImg" src="assets/image/tShirt.png" alt="Image product">
                 <div class="products-description missing-description">
                 <span class="titleProduct">
                 </span>
@@ -107,7 +104,7 @@
             </div>
             <div class="cart-buttons buttons-missing-products">
                 <img class="like-icon-style" src="assets/icons/like-icon.svg" alt="Like icon">
-                <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                <img class="deleteIcon" src="assets/icons/delete-icon.svg" alt="Delete icon">
             </div>
         </div>
     </div>
@@ -194,7 +191,7 @@
                 <img class="change-delivery-method-popup-close" src="assets/icons/close-icon.svg" alt="Close icon">
             </div>
             <div class="delivery-method-buttons-div">
-                <button class="delivery-method-buttons-styles">
+                <button class="delivery-method-buttons-styles ">
                     В пункт выдачи
                 </button>
                 <button class="delivery-method-buttons-styles active">
@@ -205,27 +202,39 @@
                     <span class="saved-addresses-title">
                         Мои адреса
                     </span>
-                <div class="saved-addresses-styles">
-                    <input type="radio">
-                    <span>
+                <div class="delivery-part ">
+                    <div class="saved-addresses-styles">
+                        <input type="radio">
+                        <span>
+                        Бишкек, улица Ахматбека Суюмбаева, 12/1
+                    </span>
+                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                    </div>
+                </div>
+                <div class="delivery-part active">
+                    <div class="saved-addresses-styles">
+                        <input type="radio">
+                        <span>
                         Бишкек, улица Табышалиева, 57
                     </span>
-                    <img src="assets/icons/delete-icon.svg" alt="Delete icon">
-                </div>
-                <div class="saved-addresses-styles">
-                    <input type="radio">
-                    <span>
+                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                    </div>
+                    <div class="saved-addresses-styles">
+                        <input type="radio">
+                        <span>
                         Бишкек, улица Жукеева-Пудовкина, 77/1
                     </span>
-                    <img src="assets/icons/delete-icon.svg" alt="Delete icon">
-                </div>
-                <div class="saved-addresses-styles">
-                    <input type="radio">
-                    <span>
+                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                    </div>
+                    <div class="saved-addresses-styles">
+                        <input type="radio">
+                        <span>
                         Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
                     </span>
-                    <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                    </div>
                 </div>
+
             </div>
             <button class="order-button popup-button">
                 Выбрать
@@ -234,7 +243,7 @@
 
         <div class="cart-container">
             <div class="cart">
-                <div class="products-list">
+                <div class="cart-list">
                     <span id="cart-styles">
                         Корзина
                     </span>
@@ -254,7 +263,7 @@
                     </div>
                     <div id="missingList" class="products-card">
                         <div class="cart-subtitle">
-                            <span>
+                            <span id="countMissingProducts">
                                 Отсутствуют · 3 товара
                             </span>
                             <img class='hide-icon' src="assets/icons/hide-icon.svg" alt="Hide icon">
@@ -365,7 +374,9 @@
             <div class="total-amount-card">
                 <div class="total-price">
                     <span>Итого</span>
-                    <span id="total-price">2 101 063 сом</span>
+                    <span id="totalPrice">
+<!--                        2 101 063-->
+                    </span>
                 </div>
                 <div class="price-information">
                     <div class="information-style">
