@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/totalAmountStyles.css">
@@ -13,15 +14,117 @@
     <title>Товары и точка</title>
 </head>
 <body>
+
+<template id="templateProductList">
+    <div class="products-list">
+        <div class="description-section">
+            <div class="products-info">
+                <input class="choice-checkbox" type="checkbox">
+                <img class="product-img-style" src="assets/image/tShirt.png"
+                     alt="Image product">
+                <div class="products-description">
+                    <span class="titleProduct">
+
+                    </span>
+                    <div class="characteristics-missing-products">
+                        <span class="colorProduct">
+
+                        </span>
+                        <span class="sizeProduct">
+
+                        </span>
+                    </div>
+                    <div class="company-data">
+                        <span id="stockProduct">
+
+                        </span>
+                        <div class="company">
+                            <span id="companyProduct">
+
+                            </span>
+                            <img src="assets/icons/info-icon.svg" alt="Info icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price-section">
+                <div class="product-operations">
+                    <div class="counter">
+                        <button class="counter-button-styles">
+                            −
+                        </button>
+                        <span>
+                            1
+                        </span>
+                        <button class="counter-button-styles">
+                            +
+                        </button>
+                    </div>
+                    <span class="products-left-style">
+
+                    </span>
+                    <div class="cart-buttons">
+                        <img class="like-icon-style" src="assets/icons/like-icon.svg"
+                             alt="Like icon">
+                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                    </div>
+                </div>
+                <div class="products-price">
+                    <div class="current-price">
+                        <span class="price-style">
+
+                        </span>
+                        <span>
+                            &nbspсом
+                        </span>
+                    </div>
+                    <span class="old-price">
+
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="templateMissingProductList">
+    <div class="products-list">
+        <div class="products-info description-section">
+            <div class="products-info">
+                <img class="product-img-style missing-img" alt="Image product">
+                <!--                     src="assets/image/tShirt.png"-->
+
+                <div class="products-description missing-description">
+                <span class="titleProduct">
+                </span>
+                    <div class="characteristics-missing-products">
+                    <span class="colorProduct">
+                    </span>
+                        <span class="sizeProduct">
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-buttons buttons-missing-products">
+                <img class="like-icon-style" src="assets/icons/like-icon.svg" alt="Like icon">
+                <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+            </div>
+        </div>
+    </div>
+</template>
+
+
 <div class="main-container">
     <div class="header">
         <div class="header-content">
-            <button class="menu-burger">
+            <div class="menu-logo">
+                <button class="menu-burger">
                 <span class="burger-line">
                 </span>
-            </button>
-            <div class="logo">
-                <img src="assets/icons/logo.svg" alt="logo">
+                </button>
+                <div class="logo">
+                    <img src="assets/icons/logo.svg" alt="logo">
+                </div>
             </div>
             <form class="search-form">
                 <input class="input-field" placeholder="Я ищу...">
@@ -41,320 +144,123 @@
     </div>
 
     <div class="cart-main-container">
+
+        <dialog class="change-method-popup payment-method-popup">
+            <div class="change-method-header">
+                    <span>
+                        Способ оплаты
+                    </span>
+                <img class="change-payment-method-popup-close" src="assets/icons/close-icon.svg" alt="Close icon">
+            </div>
+            <div class="payment-cards-list">
+                <div class="payment-card">
+                    <input type="radio">
+                    <img src="assets/icons/mir-payment-system.svg" alt="Payment system icon">
+                    <span>
+                        1234 56•• •••• 1234
+                    </span>
+                </div>
+                <div class="payment-card">
+                    <input type="radio">
+                    <img src="assets/icons/visa-payment-system.svg" alt="Payment system icon">
+                    <span>
+                            1234 56•• •••• 1234
+                        </span>
+                </div>
+                <div class="payment-card">
+                    <input type="radio">
+                    <img src="assets/icons/mastercard-payment-system.svg" alt="Payment system icon">
+                    <span>
+                            1234 56•• •••• 1234
+                        </span>
+                </div>
+                <div class="payment-card">
+                    <input type="radio">
+                    <img src="assets/icons/maestro-payment-system.svg" alt="Payment system icon">
+                    <span>
+                            1234 56•• •••• 1234
+                        </span>
+                </div>
+            </div>
+            <button class="order-button popup-button">
+                Выбрать
+            </button>
+        </dialog>
+        <dialog class="change-method-popup delivery-method-popup">
+            <div class="change-method-header">
+                <span>
+                    Способ доставки
+                </span>
+                <img class="change-delivery-method-popup-close" src="assets/icons/close-icon.svg" alt="Close icon">
+            </div>
+            <div class="delivery-method-buttons-div">
+                <button class="delivery-method-buttons-styles">
+                    В пункт выдачи
+                </button>
+                <button class="delivery-method-buttons-styles active">
+                    Курьером
+                </button>
+            </div>
+            <div class="saved-addresses">
+                    <span class="saved-addresses-title">
+                        Мои адреса
+                    </span>
+                <div class="saved-addresses-styles">
+                    <input type="radio">
+                    <span>
+                        Бишкек, улица Табышалиева, 57
+                    </span>
+                    <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                </div>
+                <div class="saved-addresses-styles">
+                    <input type="radio">
+                    <span>
+                        Бишкек, улица Жукеева-Пудовкина, 77/1
+                    </span>
+                    <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                </div>
+                <div class="saved-addresses-styles">
+                    <input type="radio">
+                    <span>
+                        Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
+                    </span>
+                    <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                </div>
+            </div>
+            <button class="order-button popup-button">
+                Выбрать
+            </button>
+        </dialog>
+
         <div class="cart-container">
             <div class="cart">
                 <div class="products-list">
                     <span id="cart-styles">
                         Корзина
                     </span>
-                    <div class="products-card">
+                    <div id="productList" class="products-card">
                         <div class="cart-subtitle">
                             <div>
-                                <input type="checkbox">
+                                <input class="choice-all-checkbox" type="checkbox">
                                 <span>
                                     Выбрать все
                                 </span>
                             </div>
                             <img class='hide-icon' src="assets/icons/hide-icon.svg" alt="Hide icon">
                         </div>
-                        <div class="products-list">
-                            <div class="description-section">
-                                <div class="products-info">
-                                    <input class="choice-checkbox" type="checkbox">
-                                    <img class="product-img-style" src="assets/image/tShirt.png"
-                                         alt="Image product">
-                                    <div class="products-description">
-                                        <span>
-                                            Футболка UZcotton мужская
-                                        </span>
-                                        <div class="characteristics-missing-products">
-                                            <span>
-                                                Цвет: белый
-                                            </span>
-                                            <span>
-                                                Размер: 56
-                                            </span>
-                                        </div>
-                                        <div class="company-data">
-                                            <span>
-                                                Коледино WB
-                                            </span>
-                                            <div class="company">
-                                                <span>
-                                                    OOO Вайлдберриз
-                                                </span>
-                                                <img src="assets/icons/info-icon.svg" alt="Info icon">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="price-section">
-                                    <div class="product-operations">
-                                        <div class="counter">
-                                            <button class="counter-button-styles">
-                                                −
-                                            </button>
-                                            <span>
-                                            1
-                                        </span>
-                                            <button class="counter-button-styles">
-                                                +
-                                            </button>
-                                        </div>
-                                        <span class="products-left-style">
-                                            Осталось 2 шт.
-                                        </span>
-                                        <div class="cart-buttons">
-                                            <img class="like-icon-style" src="assets/icons/like-icon.svg"
-                                                 alt="Like icon">
-                                            <img src="assets/icons/delete-icon.svg" alt="Delete icon">
-                                        </div>
-                                    </div>
-                                    <div class="products-price">
-                                        <div class="current-price">
-                                            <span class="price-style">
-                                                522
-                                            </span>
-                                            <span>
-                                                &nbspсом
-                                            </span>
-                                        </div>
-                                        <span class="old-price">
-                                            1051 сом
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="products-list">
-                            <div class="description-section">
-                                <div class="products-info">
-                                    <input class="choice-checkbox" type="checkbox">
-                                    <img class="product-img-style" src="assets/image/tShirt.png"
-                                         alt="Image product">
-                                    <div class="products-description">
-                                        <span>
-                                            Футболка UZcotton мужская
-                                        </span>
-                                        <div class="characteristics-missing-products">
-                                            <span>
-                                                Цвет: белый
-                                            </span>
-                                            <span>
-                                                Размер: 56
-                                            </span>
-                                        </div>
-                                        <div class="company-data">
-                                            <span>
-                                                Коледино WB
-                                            </span>
-                                            <div class="company">
-                                                <span>
-                                                    OOO Вайлдберриз
-                                                </span>
-                                                <img src="assets/icons/info-icon.svg" alt="Info icon">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="price-section">
-                                    <div class="product-operations">
-                                        <div class="counter">
-                                            <button class="counter-button-styles">
-                                                −
-                                            </button>
-                                            <span>
-                                            1
-                                        </span>
-                                            <button class="counter-button-styles">
-                                                +
-                                            </button>
-                                        </div>
-                                        <span class="products-left-style">
-                                            Осталось 2 шт.
-                                        </span>
-                                        <div class="cart-buttons">
-                                            <img class="like-icon-style" src="assets/icons/like-icon.svg"
-                                                 alt="Like icon">
-                                            <img src="assets/icons/delete-icon.svg" alt="Delete icon">
-                                        </div>
-                                    </div>
-                                    <div class="products-price">
-                                        <div class="current-price">
-                                            <span class="price-style">
-                                                522
-                                            </span>
-                                            <span>
-                                                &nbspсом
-                                            </span>
-                                        </div>
-                                        <span class="old-price">
-                                            1051 сом
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="products-list">
-                            <div class="description-section">
-                                <div class="products-info">
-                                    <input class="choice-checkbox" type="checkbox">
-                                    <img class="product-img-style" src="assets/image/tShirt.png"
-                                         alt="Image product">
-                                    <div class="products-description">
-                                        <span>
-                                            Футболка UZcotton мужская
-                                        </span>
-                                        <div class="characteristics-missing-products">
-                                            <span>
-                                                Цвет: белый
-                                            </span>
-                                            <span>
-                                                Размер: 56
-                                            </span>
-                                        </div>
-                                        <div class="company-data">
-                                            <span>
-                                                Коледино WB
-                                            </span>
-                                            <div class="company">
-                                                <span>
-                                                    OOO Вайлдберриз
-                                                </span>
-                                                <img src="assets/icons/info-icon.svg" alt="Info icon">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="price-section">
-                                    <div class="product-operations">
-                                        <div class="counter">
-                                            <button class="counter-button-styles">
-                                                −
-                                            </button>
-                                            <span>
-                                            1
-                                        </span>
-                                            <button class="counter-button-styles">
-                                                +
-                                            </button>
-                                        </div>
-                                        <span class="products-left-style">
-                                            Осталось 2 шт.
-                                        </span>
-                                        <div class="cart-buttons">
-                                            <img class="like-icon-style" src="assets/icons/like-icon.svg"
-                                                 alt="Like icon">
-                                            <img src="assets/icons/delete-icon.svg" alt="Delete icon">
-                                        </div>
-                                    </div>
-                                    <div class="products-price">
-                                        <div class="current-price">
-                                            <span class="price-style">
-                                                522
-                                            </span>
-                                            <span>
-                                                &nbspсом
-                                            </span>
-                                        </div>
-                                        <span class="old-price">
-                                            1051 сом
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="allAvailableProducts">
+
                         </div>
                     </div>
-
-                    <div class="products-card">
+                    <div id="missingList" class="products-card">
                         <div class="cart-subtitle">
-                        <span>
-                            Отсутствуют · 3 товара
-                        </span>
+                            <span>
+                                Отсутствуют · 3 товара
+                            </span>
                             <img class='hide-icon' src="assets/icons/hide-icon.svg" alt="Hide icon">
                         </div>
-                        <div class="products-list">
-                            <div class="description-section">
-                                <div class="products-info">
-                                    <img class="product-img-style missing-img" src="assets/image/tShirt.png"
-                                         alt="Image product">
-                                    <div class="products-description missing-description">
-                                    <span>
-                                        Футболка UZcotton мужская
-                                    </span>
-                                        <div class="characteristics-missing-products">
-                                        <span>
-                                            Цвет: белый
-                                        </span>
-                                            <span>
-                                            Размер: 56
-                                        </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cart-buttons">
-                                    <img class="like-icon-style" src="assets/icons/like-icon.svg" alt="Like icon">
-                                    <img src="assets/icons/delete-icon.svg" alt="Delete icon">
-                                </div>
-                            </div>
 
-
-
-                        </div>
-                        <div class="products-list">
-                            <div class="products-info description-section">
-                                <div class="products-info">
-                                    <img class="product-img-style missing-img" src="assets/image/tShirt.png"
-                                         alt="Image product">
-                                    <div class="products-description missing-description">
-                                    <span>
-                                        Футболка UZcotton мужская
-                                    </span>
-                                        <div class="characteristics-missing-products">
-                                        <span>
-                                            Цвет: белый
-                                        </span>
-                                            <span>
-                                            Размер: 56
-                                        </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cart-buttons">
-                                    <img class="like-icon-style" src="assets/icons/like-icon.svg" alt="Like icon">
-                                    <img src="assets/icons/delete-icon.svg" alt="Delete icon">
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                        <div class="products-list">
-                            <div class="products-info description-section">
-                                <div class="products-info">
-                                    <img class="product-img-style missing-img" src="assets/image/tShirt.png"
-                                         alt="Image product">
-                                    <div class="products-description missing-description">
-                                    <span>
-                                        Футболка UZcotton мужская
-                                    </span>
-                                        <div class="characteristics-missing-products">
-                                        <span>
-                                            Цвет: белый
-                                        </span>
-                                            <span>
-                                            Размер: 56
-                                        </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cart-buttons">
-                                    <img class="like-icon-style" src="assets/icons/like-icon.svg" alt="Like icon">
-                                    <img src="assets/icons/delete-icon.svg" alt="Delete icon">
-                                </div>
-                            </div>
-
-
+                        <div id="allMissingProducts">
 
                         </div>
                     </div>
@@ -363,7 +269,7 @@
                 <div class="delivery-method-card">
                     <div class="title-cart-part">
                         <span>Способ доставки</span>
-                        <button class="edit-button">Изменить</button>
+                        <button class="edit-button change-delivery-method-popup-show">Изменить</button>
                     </div>
                     <div class="part-card">
                         <span class="title-left-part-card">Пункт выдачи</span>
@@ -401,17 +307,19 @@
                         <span>
                             Обратная доставка товаров на склад при отказе —
                         </span>
-                        <span class="free-return-styles">бесплатно</span>
+                        <span class="free-return-styles"
+                              data-free="Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно">
+                            бесплатно</span>
                     </div>
                 </div>
 
                 <div class="payment-method-card">
                     <div class="title-cart-part">
                         <span>Способ оплаты</span>
-                        <button class="edit-button">Изменить</button>
+                        <button class="edit-button change-payment-method-popup-show">Изменить</button>
                     </div>
                     <div class="payment-card-data">
-                        <img src="assets/icons/Payment-systems.svg" alt="Payment system">
+                        <img src="assets/icons/mir-payment-system.svg" alt="Payment system">
                         <span>1234 56•• •••• 1234 01/30</span>
                     </div>
                     <span class="signature">Спишем оплату с карты при получении</span>
@@ -478,7 +386,8 @@
                         <span>
                             Доставка в пункт выдачи
                         </span>
-                        <img class="edit-pencil" src="assets/icons/edit-pencil.svg" alt="Edit pencil">
+                        <img class="edit-pencil change-delivery-method-popup-show" src="assets/icons/edit-pencil.svg"
+                             alt="Edit pencil">
                     </div>
                     <div class="address-delivery">
                         <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
@@ -486,11 +395,14 @@
                     </div>
                     <div class="info-return-cost">
                         <img src="assets/icons/price-shipping.svg" alt="Price shipping">
-                        <div>
+                        <div class="return-cost">
                             <span>
-                            Обратная доставка товаров на склад при отказе —
-                        </span>
-                            <span class="free-return-styles">бесплатно</span>
+                                Обратная доставка товаров на склад при отказе —
+                            </span>
+                            <span class="free-return-styles"
+                                  data-free="Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно">
+                                бесплатно
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -499,10 +411,11 @@
                         <span>
                             Оплата картой
                         </span>
-                        <img class="edit-pencil" src="assets/icons/edit-pencil.svg" alt="Edit pencil">
+                        <img class="edit-pencil change-payment-method-popup-show" src="assets/icons/edit-pencil.svg"
+                             alt="Edit pencil">
                     </div>
                     <div class="card-details">
-                        <img src="assets/icons/Payment-systems.svg" alt="Payment systems icon">
+                        <img src="assets/icons/mir-payment-system.svg" alt="Payment systems icon">
                         <span>
                             1234 12•• •••• 1234
                         </span>
@@ -532,11 +445,13 @@
         </div>
     </div>
 
-    <div class="footer">
+
+</div>
+<footer class="footer">
         <span>
             © 2022 ООО «Товары и точка»
         </span>
-    </div>
-</div>
+</footer>
+<script type="module" src="js/index.js"></script>
 </body>
 </html>

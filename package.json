@@ -1,0 +1,25 @@
+{
+  "name": "layuot-wb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashamogacheva/Layuot-WB.git"
+  },
+  "keywords": [],
+  "author": "Dasha Mogacheva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dashamogacheva/Layuot-WB/issues"
+  },
+  "homepage": "https://github.com/dashamogacheva/Layuot-WB#readme",
+  "dependencies": {
+    "data": "^0.6.1"
+  }
+}

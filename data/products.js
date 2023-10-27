@@ -1,10 +1,10 @@
-[
+export const productsList = [
   {
     "name": "Футболка UZcotton мужская",
     "color": "белый",
     "imgURL": "tShirt",
     "size": 56,
-    "price": "522 сом",
+    "price": 522,
     "oldPrice": "1050 сом",
     "quantity": 2,
     "stock": "Коледино WB",
@@ -15,7 +15,7 @@
     "color": "прозрачный",
     "imgURL": "phoneCase",
     "size": null,
-    "price": "10500.235 сом",
+    "price": 10500.235,
     "oldPrice": "1150.235 сом",
     "quantity": 300,
     "stock": "Коледино WB",
@@ -26,7 +26,7 @@
     "color": null,
     "imgURL": "pencils",
     "size": null,
-    "price": "247 сом",
+    "price": 247,
     "oldPrice": "475 сом",
     "quantity": 2,
     "stock": "Коледино WB",

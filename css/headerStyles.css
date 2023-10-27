@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px;
+    padding: 16px 3px 16px 24px;
     width: 1400px;
 }
 
@@ -52,26 +52,27 @@
 .logo {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4px;
+    margin-left: 16px;
 }
 
-.logo span {
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 20px;
+.menu-logo {
+    display: inline-flex;
 }
 
 .search-form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
     height: 48px;
     border-radius: 25px;
     padding: 19px;
     border: none;
+    width: 970px;
     background-color: #FFFFFF33;
+    margin: 0 23px;
 }
 
 .search-form img {
@@ -93,14 +94,25 @@
     opacity: 50%;
 }
 
+.menu-buttons {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
 .profile-button, .basket-button {
     height: 55px;
     width: auto;
     border: none;
     background-color: #6725A8;
     align-items: center;
-    margin: 0 0 0 15px;
     cursor: pointer;
+}
+.profile-button {
+    padding: 1px 27px 0 5px;
+}
+
+.basket-button {
+    margin: 0 10px 0 0;
 }
 
 .button-title {
