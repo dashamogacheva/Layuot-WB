@@ -11,15 +11,18 @@
     <link rel="stylesheet" href="css/recipientDetailsCardStyles.css">
     <link rel="stylesheet" href="css/deliveryMethodCardStyles.css">
     <link rel="stylesheet" href="css/missingProductsCardStyles.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Товары и точка</title>
 </head>
 <body>
-
 <template id="templateProductList">
     <div class="products-list">
         <div class="description-section">
             <div class="products-info">
-                <input class="choice-checkbox" type="checkbox">
+                <label class="custom-checkbox-product choice-checkbox">
+                    <input id="productCheckbox" class="custom-checkbox" type="checkbox" checked>
+                    <span></span>
+                </label>
                 <img class="product-img-style" src="assets/image/tShirt.png"
                      alt="Image product">
                 <div class="products-description">
@@ -109,8 +112,6 @@
         </div>
     </div>
 </template>
-
-
 <div class="main-container">
     <div class="header">
         <div class="header-content">
@@ -133,15 +134,19 @@
                     <span class="button-title">Профиль</span>
                 </button>
                 <button class="basket-button">
-                    <img src="assets/icons/Basket-icon.svg" alt="Basket icon">
+                    <span class="cart-quantity">
+
+                    </span>
+                    <img src="assets/icons/cart-header-icon.svg" alt="Cart icon">
                     <span class="button-title">Корзина</span>
                 </button>
             </div>
+            <button class="mobile-search">
+                <img src="assets/icons/mobile-search-icon.svg" alt="Search icon">
+            </button>
         </div>
     </div>
-
     <div class="cart-main-container">
-
         <dialog class="change-method-popup payment-method-popup">
             <div class="change-method-header">
                     <span>
@@ -151,35 +156,43 @@
             </div>
             <div class="payment-cards-list">
                 <div class="payment-card">
-                    <input type="radio">
-                    <img src="assets/icons/mir-payment-system.svg" alt="Payment system icon">
-                    <span>
-                        1234 56•• •••• 1234
-                    </span>
-                </div>
-                <div class="payment-card">
-                    <input type="radio">
-                    <img src="assets/icons/visa-payment-system.svg" alt="Payment system icon">
-                    <span>
+                    <input id="mir" class="custom-radio" type="radio" name="payment" checked>
+                    <label for="mir" class="payment-card">
+                        <img src="assets/icons/mir-payment-system.svg" alt="Payment system icon">
+                        <span class="number-card">
                             1234 56•• •••• 1234
                         </span>
+                    </label>
                 </div>
                 <div class="payment-card">
-                    <input type="radio">
-                    <img src="assets/icons/mastercard-payment-system.svg" alt="Payment system icon">
-                    <span>
+                    <input id="visa" class="custom-radio" name="payment" type="radio">
+                    <label for="visa" class="payment-card">
+                        <img src="assets/icons/visa-payment-system.svg" alt="Payment system icon">
+                        <span class="number-card">
                             1234 56•• •••• 1234
                         </span>
+                    </label>
                 </div>
                 <div class="payment-card">
-                    <input type="radio">
-                    <img src="assets/icons/maestro-payment-system.svg" alt="Payment system icon">
-                    <span>
+                    <input id="mastercard" class="custom-radio" name="payment" type="radio">
+                    <label for="mastercard" class="payment-card">
+                        <img src="assets/icons/mastercard-payment-system.svg" alt="Payment system icon">
+                        <span class="number-card">
                             1234 56•• •••• 1234
                         </span>
+                    </label>
+                </div>
+                <div class="payment-card">
+                    <input id="maestro" class="custom-radio" name="payment" type="radio">
+                    <label for="maestro" class="payment-card">
+                        <img src="assets/icons/maestro-payment-system.svg" alt="Payment system icon">
+                        <span class="number-card">
+                            1234 56•• •••• 1234
+                        </span>
+                    </label>
                 </div>
             </div>
-            <button class="order-button popup-button">
+            <button id="paymentPopupButton" class="order-button popup-button">
                 Выбрать
             </button>
         </dialog>
@@ -199,48 +212,46 @@
                 </button>
             </div>
             <div class="saved-addresses">
-                    <span class="saved-addresses-title">
-                        Мои адреса
-                    </span>
+                <span class="saved-addresses-title">
+                    Мои адреса
+                </span>
                 <div class="delivery-part ">
                     <div class="saved-addresses-styles">
-                        <input type="radio">
-                        <span>
-                        Бишкек, улица Ахматбека Суюмбаева, 12/1
-                    </span>
-                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                        <input id='address1' class="custom-radio" name="address" type="radio" checked>
+                        <label class="label-address" for="address1">
+                            Бишкек, улица Ахматбека Суюмбаева, 12/1
+                        </label>
+                        <img class="deleteIcon" src="assets/icons/delete-icon.svg" alt="Delete icon">
                     </div>
                 </div>
                 <div class="delivery-part active">
                     <div class="saved-addresses-styles">
-                        <input type="radio">
-                        <span>
-                        Бишкек, улица Табышалиева, 57
-                    </span>
-                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                        <input id='address2' class="custom-radio" name="address" type="radio">
+                        <label class="label-address" for="address2">
+                            Бишкек, улица Табышалиева, 57
+                        </label>
+                        <img class="deleteIcon" src="assets/icons/delete-icon.svg" alt="Delete icon">
                     </div>
                     <div class="saved-addresses-styles">
-                        <input type="radio">
-                        <span>
-                        Бишкек, улица Жукеева-Пудовкина, 77/1
-                    </span>
-                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                        <input id='address3' class="custom-radio" name="address" type="radio">
+                        <label class="label-address" for="address3">
+                            Бишкек, улица Жукеева-Пудовкина, 77/1
+                        </label>
+                        <img class="deleteIcon" src="assets/icons/delete-icon.svg" alt="Delete icon">
                     </div>
                     <div class="saved-addresses-styles">
-                        <input type="radio">
-                        <span>
-                        Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
-                    </span>
-                        <img src="assets/icons/delete-icon.svg" alt="Delete icon">
+                        <input id='address4' class="custom-radio" name="address" type="radio">
+                        <label class="label-address" for="address4">
+                            Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
+                        </label>
+                        <img class="deleteIcon" src="assets/icons/delete-icon.svg" alt="Delete icon">
                     </div>
                 </div>
-
             </div>
-            <button class="order-button popup-button">
+            <button id="deliveryPopupButton" class="order-button popup-button">
                 Выбрать
             </button>
         </dialog>
-
         <div class="cart-container">
             <div class="cart">
                 <div class="cart-list">
@@ -249,13 +260,16 @@
                     </span>
                     <div id="productList" class="products-card">
                         <div class="cart-subtitle">
-                            <div>
-                                <input class="choice-all-checkbox" type="checkbox">
-                                <span>
+                            <div class="active-cart">
+                                <input class="custom-checkbox" id="choiceAllCheckbox" type="checkbox" checked>
+                                <label for="choiceAllCheckbox">
                                     Выбрать все
-                                </span>
+                                </label>
                             </div>
-                            <img class='hide-icon' src="assets/icons/hide-icon.svg" alt="Hide icon">
+                            <span class="hide-cart">
+                                266 товаров · 2 100 569 сом
+                            </span>
+                            <img class='hide-icon' src="assets/icons/hide-icon.svg" alt="Hide icon" active>
                         </div>
                         <div id="allAvailableProducts">
 
@@ -264,7 +278,7 @@
                     <div id="missingList" class="products-card">
                         <div class="cart-subtitle">
                             <span id="countMissingProducts">
-                                Отсутствуют · 3 товара
+<!--                                Отсутствуют · 3 товара-->
                             </span>
                             <img class='hide-icon' src="assets/icons/hide-icon.svg" alt="Hide icon">
                         </div>
@@ -274,16 +288,15 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="delivery-method-card">
                     <div class="title-cart-part">
                         <span>Способ доставки</span>
                         <button class="edit-button change-delivery-method-popup-show">Изменить</button>
                     </div>
-                    <div class="part-card">
+                    <div class="part-card delivery-date">
                         <span class="title-left-part-card">Пункт выдачи</span>
                         <div class="pick-up-point-data">
-                            <span class="right-part-card">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+                            <span class="right-part-card address-value">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
                             <div class="schedule">
                                 <div class="grade">
                                     <img src="assets/icons/Stars.svg" alt="Stars">
@@ -293,11 +306,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="part-card">
+                    <div class="part-card delivery-date">
                         <span class="title-left-part-card">Стоимость доставки</span>
                         <span class="right-part-card">Бесплатно</span>
                     </div>
-                    <div class="part-card">
+                    <div class="part-card delivery-date">
                         <span class="title-left-part-card">5—6 февраля</span>
                         <div class="products-delivery">
                             <img class='image-styles' src="assets/image/tShirt.png" alt="T-shirt">
@@ -305,7 +318,7 @@
                             <img class='image-styles' src="assets/image/pencils.png" alt="Pencils">
                         </div>
                     </div>
-                    <div class="part-card">
+                    <div class="part-card delivery-date">
                         <span class="title-left-part-card">6—8 февраля</span>
                         <div class="products-delivery">
                             <img class='image-styles' src="assets/image/phoneCase.png" alt="Phone case">
@@ -321,44 +334,42 @@
                             бесплатно</span>
                     </div>
                 </div>
-
                 <div class="payment-method-card">
                     <div class="title-cart-part">
                         <span>Способ оплаты</span>
                         <button class="edit-button change-payment-method-popup-show">Изменить</button>
                     </div>
                     <div class="payment-card-data">
-                        <img src="assets/icons/mir-payment-system.svg" alt="Payment system">
-                        <span>1234 56•• •••• 1234 01/30</span>
+                        <img class="iconPaymentCard" src="assets/icons/mir-payment-system.svg" alt="Payment system">
+                        <span class="numberPaymentCard">1234 56•• •••• 1234 01/30</span>
                     </div>
                     <span class="signature">Спишем оплату с карты при получении</span>
                 </div>
-
                 <div class="recipient-details-card">
                     <span class="title-recipient-details">Получатель</span>
                     <div class="recipient-details">
                         <div class="line-styles">
                             <div class="div-input-styles">
-                                <input class="input-styles" placeholder="">
+                                <input id="name" class="input-styles" placeholder="Имя">
                                 <label class="label-for-input">Имя</label>
                             </div>
                             <div class="div-input-styles">
-                                <input class="input-styles" placeholder="">
+                                <input id="surname" class="input-styles" placeholder="Фамилия">
                                 <label class="label-for-input">Фамилия</label>
                             </div>
                         </div>
                         <div class="line-styles">
                             <div class="div-input-styles">
-                                <input class="input-styles" placeholder="">
+                                <input id="email" class="input-styles" placeholder="Почта">
                                 <label class="label-for-input">Почта</label>
                             </div>
                             <div class="div-input-styles">
-                                <input class="input-styles" placeholder="">
+                                <input id="phoneNumber" class="input-styles" placeholder="Телефон">
                                 <label class="label-for-input">Телефон</label>
                             </div>
                             <div class="inn-div-style">
                                 <div class="div-input-styles">
-                                    <input class="input-styles" placeholder="">
+                                    <input id="inn" class="input-styles " placeholder="ИНН">
                                     <label class="label-for-input">ИНН</label>
                                 </div>
                                 <label class="label-inn-style">
@@ -366,26 +377,30 @@
                                 </label>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
             <div class="total-amount-card">
                 <div class="total-price">
                     <span>Итого</span>
                     <span id="totalPrice">
-<!--                        2 101 063-->
+
                     </span>
                 </div>
                 <div class="price-information">
                     <div class="information-style">
-                        <span>203 товара</span>
-                        <span>2 302 048 сом</span>
+                        <span id="totalQuantityProduct">
+
+                        </span>
+                        <span id="totalOldPrice">
+
+                        </span>
                     </div>
                     <div class="information-style">
                         <span>Скидка</span>
-                        <span>−200 985 сом</span>
+                        <span id="discount">
+
+                        </span>
                     </div>
                     <div class="information-style">
                         <span>Доставка</span>
@@ -401,7 +416,7 @@
                              alt="Edit pencil">
                     </div>
                     <div class="address-delivery">
-                        <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+                        <span class="address-value">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
                         <span id="delivery-date">5–8 фев</span>
                     </div>
                     <div class="info-return-cost">
@@ -409,10 +424,10 @@
                         <div class="return-cost">
                             <span>
                                 Обратная доставка товаров на склад при отказе —
-                            </span>
-                            <span class="free-return-styles"
-                                  data-free="Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно">
+                                <span class="free-return-styles"
+                                      data-free="Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно">
                                 бесплатно
+                            </span>
                             </span>
                         </div>
                     </div>
@@ -426,24 +441,25 @@
                              alt="Edit pencil">
                     </div>
                     <div class="card-details">
-                        <img src="assets/icons/mir-payment-system.svg" alt="Payment systems icon">
-                        <span>
+                        <img class="iconPaymentCard" src="assets/icons/mir-payment-system.svg"
+                             alt="Payment systems icon">
+                        <span class="numberPaymentCard">
                             1234 12•• •••• 1234
                         </span>
                     </div>
                     <div class="write-off-of-payment">
                         <div class="payment-checkbox">
-                            <input type="checkbox">
-                            <label>
+                            <input class="custom-checkbox" id="payNow" type="checkbox">
+                            <label for="payNow">
                                 Списать оплату сразу
                             </label>
                         </div>
-                        <span>
+                        <span id="payNowDescription">
                             Спишем оплату с карты при получении
                         </span>
                     </div>
                 </div>
-                <button class="order-button">
+                <button id="orderBtn" class="order-button">
                     Заказать
                 </button>
                 <div class="agreement">
@@ -455,14 +471,32 @@
             </div>
         </div>
     </div>
-
-
 </div>
 <footer class="footer">
         <span>
             © 2022 ООО «Товары и точка»
         </span>
 </footer>
+<div class="tab-bar">
+    <button class="tab-bar-buttons">
+        <img src="assets/icons/main.svg" alt="Tab bar icon">
+    </button>
+    <button class="tab-bar-buttons">
+        <img src="assets/icons/catalog.svg" alt="Tab bar icon">
+    </button>
+    <button class="tab-bar-buttons cart-bar-button">
+        <span class="cart-quantity">
+
+        </span>
+        <img src="assets/icons/cart.svg" alt="Tab bar icon">
+    </button>
+    <button class="tab-bar-buttons favorites-bar-button">
+        <img src="assets/icons/favorites.svg" alt="Tab bar icon">
+    </button>
+    <button class="tab-bar-buttons">
+        <img src="assets/icons/profile.svg" alt="Tab bar icon">
+    </button>
+</div>
 <script type="module" src="js/index.js"></script>
 </body>
 </html>

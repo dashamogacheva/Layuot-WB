@@ -28,6 +28,7 @@
 }
 
 .div-input-styles {
+    position: relative;
     display: flex;
     flex-direction: column-reverse;
 }
@@ -38,20 +39,33 @@
     font-size: 16px;
     border-bottom: 1px solid #00000033;
     outline: none;
+    padding: 3px 0;
 }
 
-.input-styles:focus ~ label,
-.input-styles:not(:placeholder-shown) ~ label {
-    padding: 8px 0;
-    transform: translateY(2rem) scale(0.8);
+.input-styles::placeholder {
+    color: transparent;
+}
+
+.input-styles:placeholder-shown ~ .label-for-input {
+    cursor: text;
+    top: 20px;
+}
+
+.input-styles:focus ~ .label-for-input {
+    position: absolute;
+    top: 0;
+    display: block;
+    font-size: 1rem;
+    color: #00000033;
 }
 
 .label-for-input {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
     color: #00000033;
-    transform: translateY(2.8rem);
-    transform-origin: left top;
-    cursor: text;
-    transition: all 0.3s;
 }
 
 .inn-div-style {
