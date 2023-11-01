@@ -1,3 +1,5 @@
+import counterAvailableProducts from "./counterAvailableProducts";
+
 const hideProductListWork = () => {
     let productList = document.getElementById('productList');
     let hideButton = productList.querySelector('.hide-icon');
@@ -7,6 +9,7 @@ const hideProductListWork = () => {
 
     hideButton.addEventListener('click', () => {
         productList.classList.toggle('open');
+        counterAvailableProducts();
     });
 
     hideButtonElem.addEventListener('click', () => {

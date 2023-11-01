@@ -111,11 +111,32 @@
     padding: 1px 27px 0 5px;
 }
 
+.cart-quantity {
+    font-size: 10px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    min-width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -6px;
+    background: #f55123;
+    padding: 2px 3px 1px;
+    border-radius: 16px;
+}
+
 .basket-button {
     margin: 0 10px 0 0;
+    position: relative;
 }
 
 .button-title {
     font-size: 13px;
     color: #FFFFFF;
+}
+
+.mobile-search {
+    display: none;
 }

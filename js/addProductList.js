@@ -17,8 +17,8 @@ const addProductList = () => {
         if (elem.quantity < 5) {
             cloneTemplate.querySelector('.products-left-style').textContent = 'Осталось ' + elem.quantity + ' шт.';
         }
-        cloneTemplate.querySelector('.price-style').textContent = (Math.round(elem.price)).toLocaleString();
-        cloneTemplate.querySelector('.old-price').textContent = (Math.round(elem.oldPrice)).toLocaleString() + " сом";
+        cloneTemplate.querySelector('.price-style').textContent = Math.round(elem.price)
+        cloneTemplate.querySelector('.old-price').textContent = Math.round(elem.oldPrice) + " сом";
         allProducts.append(cloneTemplate);
     })
 }

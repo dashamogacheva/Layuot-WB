@@ -6,6 +6,14 @@ import buttonDeliveryPopupWork from "./buttonDeliveryPopupWork";
 import deleteProductsBtnWork from "./deleteProductsBtnWork";
 import counterProductsWork from "./counterProductsWork";
 import cartTotalCalculation from "./cartTotalCalculation";
+import counterMissingProducts from "./counterMissingProducts";
+import counterAvailableProducts from "./counterAvailableProducts";
+import checkPayNowWork from "./checkPayNowWork";
+import changePaymentCardWork from "./changePaymentCardWork";
+import changeAddressDeliveryWork from "./changeAddressDeliveryWork";
+import deleteDeliveryAddressWork from "./deleteDeliveryAddressWork";
+import checkProductWork from "./checkProductWork";
+import cartQuantityCountWork from "./cartQuantityCountWork";
 document.addEventListener('DOMContentLoaded', () => {
     addProductList();
     addMissingProductList();
@@ -15,4 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonDeliveryPopupWork();
     counterProductsWork();
     cartTotalCalculation();
+    counterMissingProducts();
+    counterAvailableProducts();
+    checkPayNowWork();
+    changePaymentCardWork();
+    changeAddressDeliveryWork();
+    deleteDeliveryAddressWork();
+    checkProductWork();
+    cartQuantityCountWork();
 });
