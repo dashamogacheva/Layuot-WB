@@ -1,4 +1,4 @@
-import counterAvailableProducts from "./counterAvailableProducts";
+import counterAvailableProducts from "./counterAvailableProducts.js";
 
 const hideProductListWork = () => {
     let productList = document.getElementById('productList');

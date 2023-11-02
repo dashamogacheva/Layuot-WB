@@ -3,8 +3,6 @@ const changePaymentCardWork = () => {
     const paymentMethodPopup = document.querySelector('.payment-method-popup');
     const numberPaymentCardArr = document.querySelectorAll('.numberPaymentCard');
     const iconPaymentCardArr = document.querySelectorAll('.iconPaymentCard');
-
-
     const paymentCardsList = document.querySelector('.payment-cards-list');
     const radioList = paymentCardsList.querySelectorAll('.custom-radio');
 

@@ -1,5 +1,5 @@
-import {productsList} from "../data/products";
-import cartTotalCalculation from "./cartTotalCalculation";
+import {productsList} from "../data/products.js";
+import cartTotalCalculation from "./cartTotalCalculation.js";
 
 const counterProductsWork = () => {
     const availableProductsSection = document.getElementById('allAvailableProducts');

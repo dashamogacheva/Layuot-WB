@@ -1,4 +1,4 @@
-import cartTotalCalculation from "./cartTotalCalculation";
+import cartTotalCalculation from "./cartTotalCalculation.js";
 const checkProductWork = () => {
     const allAvailableProducts = document.querySelector('#allAvailableProducts');
     const productsArray = allAvailableProducts.querySelectorAll('.products-list');

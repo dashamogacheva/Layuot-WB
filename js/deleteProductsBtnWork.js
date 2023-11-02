@@ -1,7 +1,7 @@
-import cartTotalCalculation from "./cartTotalCalculation";
-import counterMissingProducts from "./counterMissingProducts";
-import counterAvailableProducts from "./counterAvailableProducts";
-import cartQuantityCountWork from "./cartQuantityCountWork";
+import cartTotalCalculation from "./cartTotalCalculation.js";
+import counterMissingProducts from "./counterMissingProducts.js";
+import counterAvailableProducts from "./counterAvailableProducts.js";
+import cartQuantityCountWork from "./cartQuantityCountWork.js";
 
 const deleteProductsBtnWork = () => {
     const allProductsList = document.querySelectorAll('.products-list');

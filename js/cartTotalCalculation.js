@@ -5,7 +5,6 @@ function cartTotalCalculation() {
     const sumOldPrice = document.querySelector('#totalOldPrice');
     const sumQuantityProduct = document.querySelector('#totalQuantityProduct');
     const discount = document.querySelector('#discount');
-
     let totalPrice = 0;
     let totalOldPrice = 0;
     let totalCountProduct = 0;
