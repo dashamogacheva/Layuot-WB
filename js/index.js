@@ -14,6 +14,7 @@ import changeAddressDeliveryWork from "./changeAddressDeliveryWork";
 import deleteDeliveryAddressWork from "./deleteDeliveryAddressWork";
 import checkProductWork from "./checkProductWork";
 import cartQuantityCountWork from "./cartQuantityCountWork";
+import validationInputWork from "./validationInputWork";
 document.addEventListener('DOMContentLoaded', () => {
     addProductList();
     addMissingProductList();
@@ -31,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteDeliveryAddressWork();
     checkProductWork();
     cartQuantityCountWork();
+    validationInputWork();
 });

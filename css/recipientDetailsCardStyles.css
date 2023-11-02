@@ -59,6 +59,16 @@
     color: #00000033;
 }
 
+.input-styles:invalid {
+    border-color: red;
+    color: red;
+    box-shadow: none;
+}
+
+.error-label {
+    color: red;
+}
+
 .label-for-input {
     position: absolute;
     top: 0;
@@ -68,7 +78,7 @@
     color: #00000033;
 }
 
-.inn-div-style {
+.div-style {
     display: flex;
     flex-direction: column;
 }
