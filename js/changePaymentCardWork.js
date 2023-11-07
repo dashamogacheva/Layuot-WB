@@ -12,7 +12,7 @@ const changePaymentCardWork = () => {
                 numberPaymentCardArr.forEach(number => {
                     number.textContent = paymentCardsList.querySelector('.number-card').textContent;
                     iconPaymentCardArr.forEach( icon => {
-                        icon.src = `/` + `${elem.id}` + `-payment-system.svg`;
+                        icon.src = `assets/icons/` + `${elem.id}` + `-payment-system.svg`;
                     })
                 })
             }

@@ -18,7 +18,6 @@ const checkProductWork = () => {
         }
         cartTotalCalculation();
     })
-
     productsArray.forEach(product => {
         let checkbox = product.querySelector('#productCheckbox');
         checkbox.addEventListener('click', () => {
