@@ -13,6 +13,10 @@ const checkPayNowWork = () => {
             orderBtn.textContent = `Заказать`;
         }
     })
+
+    if (payNowDescription.style.display === 'none') {
+        orderBtn.textContent = `Оплатить ` + totalPrice.textContent;
+    }
 }
 
 export default checkPayNowWork;

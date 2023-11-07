@@ -1,3 +1,5 @@
+import checkPayNowWork from "./checkPayNowWork.js";
+
 function cartTotalCalculation() {
     const availableProductsSection = document.getElementById('allAvailableProducts');
     const allProducts = availableProductsSection.querySelectorAll('.products-list');
@@ -29,6 +31,7 @@ function cartTotalCalculation() {
     sumPrice.textContent = totalPrice.toLocaleString() + " сом";
     sumOldPrice.textContent = totalOldPrice.toLocaleString() + " сом";
     sumQuantityProduct.textContent = totalCountProduct + ' товара';
-    discount.textContent = '− ' + totalDiscount.toLocaleString() + ' сом'
+    discount.textContent = '− ' + totalDiscount.toLocaleString() + ' сом';
+    checkPayNowWork();
 }
 export default cartTotalCalculation;

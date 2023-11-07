@@ -304,13 +304,14 @@ footer {
 }
 
 .active-cart {
-    display: inline-flex;
+    display: none;
 }
 
 .hide-cart {
+    display: inline-flex;
     font-weight: 600;
     font-size: 16px;
-    display: none;
+
 }
 
 .choice-checkbox {
